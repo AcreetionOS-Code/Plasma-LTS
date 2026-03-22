@@ -1,0 +1,25 @@
+# =============================================================================
+# GitLab CI/CD Configuration
+# =============================================================================
+# This CI configuration handles automatic synchronization to GitHub
+# =============================================================================
+
+stages:
+  - sync
+
+sync-to-github:
+  stage: sync
+  only:
+    - main
+  script:
+    - |
+      # Configure git
+      git config user.name "GitLab CI"
+      git config user.email "gitlab-ci@gitlab.acreetionos.org"
+      
+      # Add GitHub as remote
+      git remote add github "https://github.com/AcreetionOS-Code/Plasma-LTS.git"
+      
+      # Push to GitHub
+      git push -f github main
+  when: always

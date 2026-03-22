@@ -1,10 +1,27 @@
 # Maintainer: Natalie Spiva <natalie@acreetionos.org>
 # Contributor: Natalie Spiva <natalie@acreetionos.org>
+# Author: Natalie Spiva <natalie@acreetionos.org>
+# Copyright: Copyright (c) 2026 Natalie Spiva for AcreetionOS
+# License: LGPL-2.0-or-later
+# SPDX-License-Identifier: LGPL-2.0-or-later
 # GPG Key: 1DD93EDCFFF0B9578A411AE8EEC627F9059B962C
 
 # =============================================================================
 # KDE Plasma LTS PKGBUILD
 # =============================================================================
+# Ownership & Provenance Metadata:
+#   - Primary Author: Natalie Spiva (natalie@acreetionos.org)
+#   - Organization: AcreetionOS (https://acreetionos.org)
+#   - GPG Key ID: 1DD93EDCFFF0B9578A411AE8EEC627F9059B962C
+#   - Key Fingerprint: 1DD9 3EDC FFF0 B957 8A41 1AE8 EEC6 27F9 059B 962C
+#   - Key Type: EDDSA (Ed25519)
+#   - Key Created: 2026-02-26
+#   - Key Expires: 2029-02-25
+#
+# Repository Information:
+#   - Primary: https://gitlab.acreetionos.org/natalie/plasma-lts
+#   - Mirror: https://github.com/AcreetionOS-Code/Plasma-LTS
+#
 # Version Information:
 #   - Plasma Series: 6.6 (stable release with extended support)
 #   - Current Point Release: 6.6.3 (bugfix release)
@@ -21,6 +38,12 @@
 #   - KDE discontinued official LTS releases in May 2025
 #   - This package pins to stable point releases for extended stability
 #   - Each Plasma release now receives 6 bugfix updates (previously 5)
+#
+# Verification:
+#   All packages are GPG signed. Verify with:
+#   gpg --verify plasma-lts-*.pkg.tar.zst.asc plasma-lts-*.pkg.tar.zst
+#   All commits are signed. Verify with:
+#   git log --show-signature
 # =============================================================================
 
 _plasmaver=6.6
