@@ -1,0 +1,12 @@
+pkgname = plasma-lts
+pkgbase = plasma-lts
+version = 6.6.3
+pkgrel = 1
+pkgdesc = KDE Plasma LTS - Long Term Support meta-package
+url = https://gitlab.acreetionos.org/natalie/plasma-lts
+arch = any
+license = LGPL-2.0-or-later
+depends = plasma-workspace
+provides = plasma-lts
+conflicts = plasma
+options = empty
