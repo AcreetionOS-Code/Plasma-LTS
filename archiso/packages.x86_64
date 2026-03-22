@@ -1,0 +1,172 @@
+# =============================================================================
+# AcreetionOS Live - Packages
+# =============================================================================
+# Copyright (c) 2026 Natalie Spiva for AcreetionOS
+# Author: Natalie Spiva <natalie@acreetionos.org>
+# GPG Key: 1DD93EDCFFF0B9578A411AE8EEC627F9059B962C
+# License: LGPL-2.0-or-later
+# =============================================================================
+
+# Base System
+base
+linux
+linux-firmware
+amd-ucode
+intel-ucode
+systemd
+systemd-sysvcompat
+bash
+coreutils
+filesystem
+
+# Boot
+mkinitcpio
+mkinitcpio-archiso
+grub
+efibootmgr
+
+# Networking
+networkmanager
+iwd
+dhcpcd
+openssh
+wpa_supplicant
+bind
+dnsmasq
+
+# KDE Plasma LTS
+# Note: Using plasma-lts from custom repo
+# For live build, we include core Plasma packages
+plasma-meta
+plasma-workspace
+plasma-nm
+plasma-pa
+plasma-systemmonitor
+plasma-desktop
+plasma-browser-integration
+kdeplasma-addons
+discover
+systemsettings
+bluedevil
+breeze
+breeze-gtk
+kde-gtk-config
+sddm
+
+# Frameworks & Libraries (required by Plasma)
+libplasma
+libkscreen
+libksysguard
+kcoreaddons
+kio
+kconfig
+ki18n
+kwidgetsaddons
+kwindowsystem
+kservice
+kpackage
+kdeclarative
+kcmutils
+kcompletion
+kjobwidgets
+knotifications
+ktextwidgets
+kwallet
+kscreen
+kwin
+kdecoration
+layer-shell-qt
+milou
+oxygen
+polkit-kde-agent
+powerdevil
+kgamma5
+khotkeys
+kmenuedit
+kinfocenter
+khelpcenter
+drkonqi
+kglobalacceld
+ksystemstats
+kactivitymanagerd
+kwallet-pam
+kwayland-integration
+kio-extras
+kio-fuse
+ksshaskpass
+kwrited
+kinit
+ksysguard
+kdesu
+print-manager
+user-manager
+xdg-user-dirs
+xdg-utils
+xdg-desktop-portal-kde
+flatpak-kcm
+plasma-integration
+plasma-disks
+plasma-firewall
+plasma-sdk
+
+# Fonts
+ttf-dejavu
+ttf-liberation
+fontconfig
+fonts-meta
+
+# Audio
+alsa-utils
+pipewire
+pipewire-pulse
+wireplumber
+
+# X11 / Display
+xorg
+xorg-server
+xorg-apps
+xorg-drivers
+xterm
+
+# Utilities
+sudo
+man-db
+man-pages
+vim
+nano
+less
+mlocate
+htop
+neofetch
+git
+curl
+wget
+tar
+gzip
+xz
+zstd
+ unzip
+ unrar
+ p7zip
+
+# Live Environment
+archinstall
+archinstall-scripts
+livecd-sounds
+grml-zsh-config
+zsh
+
+# Filesystems
+btrfs-progs
+ntfs-3g
+exfatprogs
+f2fs-tools
+
+# Boot Utilities
+dosfstools
+gptfdisk
+parted
+
+# Security
+polkit
+libsecret

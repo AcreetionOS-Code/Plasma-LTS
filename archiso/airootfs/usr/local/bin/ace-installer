@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+# =============================================================================
+# AcreetionOS Installer Script
+# =============================================================================
+# Copyright (c) 2026 Natalie Spiva for AcreetionOS
+# Author: Natalie Spiva <natalie@acreetionos.org>
+# GPG Key: 1DD93EDCFFF0B9578A411AE8EEC627F9059B962C
+# License: LGPL-2.0-or-later
+# =============================================================================
+
+set -e
+
+cat << "EOF"
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║   █████╗ ██████╗ ██╗     ███████╗██╗  ██╗    AcreetionOS Live             ║
+║  ██╔══██╗██╔══██╗██║     ██╔════╝╚██╗██╔╝    ═══════════════════════       ║
+║  ███████║██████╔╝██║     █████╗   ╚███╔╝     Featuring KDE Plasma LTS     ║
+║  ██╔══██║██╔═══╝ ██║     ██╔══╝   ██╔██╗     ─────────────────────────     ║
+║  ██║  ██║██║     ███████╗███████╗██╔╝ ██╗    © 2026 Natalie Spiva         ║
+║  ╚═╝  ╚═╝╚═╝     ╚══════╝╚══════╝╚═╝  ╚═╝    https://acreetionos.org     ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+EOF
+
+echo "Welcome to AcreetionOS Live featuring KDE Plasma LTS!"
+echo ""
+echo "This live environment includes:"
+echo "  • KDE Plasma ${PLASMA_VERSION:-6.6.3} LTS Desktop"
+echo "  • Long-term support with stable bugfix releases"
+echo "  • GPG signed packages by Natalie Spiva"
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+
+PS3=$'\nSelect an option: '
+options=("Launch Calamares Installer" "Start KDE Plasma Desktop" "Open Terminal" "Reboot" "Shutdown")
+
+select opt in "${options[@]}"; do
+    case $opt in
+        "Launch Calamares Installer")
+            echo "Starting Calamares..."
+            sudo -E calamares &
+            break
+            ;;
+        "Start KDE Plasma Desktop")
+            echo "Starting Plasma Desktop..."
+            startplasma-wayland || startplasma-x11
+            break
+            ;;
+        "Open Terminal")
+            konsole &
+            ;;
+        "Reboot")
+            sudo systemctl reboot
+            break
+            ;;
+        "Shutdown")
+            sudo systemctl poweroff
+            break
+            ;;
+        *)
+            echo "Invalid option"
+            ;;
+    esac
+done
